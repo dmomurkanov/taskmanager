@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<title>{% block title %} {% endblock %}</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<body>
+    <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+        <span class="fs-4">Главная страница</span>
+      <nav class="my-2 my-md-0 mr-md-3">
+        <a class="p-2 text-dark" href="{% url 'home' %}">Главная</a>
+        <a class="p-2 text-dark" href="{% url 'about' %}">О нас</a>
+          <a class="p-2 text-dark" href="{% url 'create' %}">Создать таск </a>
+      </nav>
+    </div>
+    <div class="container"></div>
+{% block content %} {% endblock %}
+</body>
+</html>
